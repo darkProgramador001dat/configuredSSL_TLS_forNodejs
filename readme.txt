@@ -1,5 +1,5 @@
 Como configurar SSL/TLS com openssl, linux utilizando NodeJS e Express
-No início do preojeto, começar como modo administrador(root). projetos
+No início do projeto, começar como modo administrador(root). projetos
 assim, precisam de desempenho maior.
 
 (0). Verifique a instalação com: apt install openssl
