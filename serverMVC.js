@@ -4,9 +4,9 @@
 // Routes: responsavel por criar nossa rotas dentro do servidor.
 // Config: responsavel pelas configurações para o servidor(Frameworks). 
 
-const express = require("./config/express/express");     // acessando o diretorio das configurações, segue o mesmo exemplo para os demais.
-const ssl = require("./config/ssl/configured_ssl");      // diretorio aonde contêm o SSL certificado.
-const routes = require("./routes/index");                // ROTAS do projeto (templates html).
+const express = require("./config/express/express");     // Importando: acessando o diretorio das configurações, segue o mesmo exemplo para os demais.
+const ssl = require("./config/ssl/configured_ssl");      // Importando: diretorio aonde contêm o SSL certificado.
+const routes = require("./routes/index");                // Importando: ROTAS do projeto (templates html).
 
 require("dotenv").config({ path: "./config/env/.env" });  // diretorio, endereço do servidor.
 
