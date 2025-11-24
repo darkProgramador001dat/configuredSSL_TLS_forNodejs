@@ -8,7 +8,7 @@ const express = require("./config/express/express");     // Importando: acessand
 const ssl = require("./config/ssl/configured_ssl");      // Importando: diretorio aonde contêm o SSL certificado.
 const routes = require("./routes/index");                // Importando: ROTAS do projeto (templates html).
 
-require("dotenv").config({ path: "./config/env/.env" });  // diretorio, endereço do servidor.
+require("dotenv").config({ path: "./config/env/.env" });  // Importando: diretorio, endereço do servidor.
 
 const helmet = require("helmet");                          // Biblioteca para proteção contra cabeçalhos, auxilio para middleware.
 const https = require("https");                    
