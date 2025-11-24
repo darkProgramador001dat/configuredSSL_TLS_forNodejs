@@ -10,11 +10,11 @@ const routes = require("./routes/index");                // Importando: ROTAS do
 
 require("dotenv").config({ path: "./config/env/.env" });  // Importando: diretorio, endereço do servidor.
 
-const helmet = require("helmet");                          // Biblioteca para proteção contra cabeçalhos, auxilio para middleware.
-const https = require("https");                    
-const path = require("path");                              // Biblioteca para configurações de caminho.
-const fs = require("fs");                                  // Biblioteca para abrir arquivos, etc.(CRUD)
-const bodyParser = require("body-parser");                 // Biblioteca para receber corpo de requisições POST. 
+const helmet = require("helmet");                          // Importando: biblioteca para proteção contra cabeçalhos, auxilio para middleware.
+const https = require("https");                            // Importando: bibloteca para auxiliar na construção do servidor e o SSL construir(necessario para SSL)
+const path = require("path");                              // Importando: biblioteca para configurações de caminho.
+const fs = require("fs");                                  // Importando: biblioteca para abrir arquivos, etc.(CRUD)
+const bodyParser = require("body-parser");                 // Importando: biblioteca para receber corpo de requisições POST. 
 
 const app = express();  // Instancia do servidor, configurado no caminho ./config/express/express
 
@@ -28,16 +28,15 @@ app.use(helmet());    // Utilizando a biblioteca
 app.use(simpleMiddleware);    // Utilizando o middleware.
 
 
-
 // ROTAS.
 app.use(express.static(path.join(__dirname, "public")));    // Utilizando o diretorio estatico para renderizar, CSS. etc.
 app.use(bodyParser.urlencoded({ extended: true }));         // Receber o corpo da requisição. frontend
 app.use(bodyParser.json());                                 // converter em json 
 
-app.use("/", routes);    // Utilizando uma rota para(RAIZ)
+app.use("/", routes);    // Utilizando a rota vindo do diretorio ./routes/index na aplicação do codigo. 
 
 
-// Instancia do servidor, IP || PORTA
+// Instancia do servidor, IP || PORTA vindo do .env
 const PORT = process.env.PORT;
 const HOST = process.env.HOST;
 
