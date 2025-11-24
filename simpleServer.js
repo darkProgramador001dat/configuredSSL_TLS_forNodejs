@@ -1,5 +1,5 @@
 const express = require('express');  // Biblioteca Framework Express
-const https = require('https');      // Biblioteca Auxilio para criar um servidor
+const https = require('https');      // Biblioteca Auxilio para criar um servidor(necessario para SSL)
 const path = require('path');        // Biblioteca para redirecionar os caminhos no servidor
 const fs = require('fs');            // Biblioteca para CRUD
 
