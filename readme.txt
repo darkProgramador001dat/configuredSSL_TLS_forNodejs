@@ -7,7 +7,7 @@ Descrição para conseguir um certificado SSL.
 1. Verifique a instalação com: apt install openssl
 2. comece criando a chave: openssl genpkey -algorithm RSA -out private-key.pem -aes256
 3. Gerar o certificado CSR: openssl req -new -key private-key.pem -out request.csr
-4. Realizar assinatura: openssl x509 -req -in request.csr -signkey private-key.pem -out certificate.epm -days 365
+4. Realizar assinatura: openssl x509 -req -in request.csr -signkey private-key.pem -out certificate.pem -days 365
 
 O que é o SSL(Secure Socket Layer)
 O SSL, camada de soquetes seguros é um protocolo de segurança que proporciona privacidade de segurança
