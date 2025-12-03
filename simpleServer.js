@@ -15,16 +15,16 @@ app.get('/', (request, response) => {
   response.statusCode = 200;
   response.setHeader('Content-Type', 'text/html');
   response.send(`
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <title>page</title>
-</head>
-<body>
-  <h2>Hi, visitant!</h2>
-</body>
-</html>
+  <!DOCTYPE html>
+  <html lang='en'>
+    <head>
+      <meta charset='utf-8'>
+      <title>page</title>
+    </head>
+    <body>
+      <h2> Hi, visitant! </h2>
+    </body>
+  </html>
   `);
 });
 
