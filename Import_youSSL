@@ -7,11 +7,4 @@ const certificate = fs.readFileSync(path.join(__dirname, 'certificate.csr'), 'ut
 const domain = [{ key: privateKey, cert: certificate }];
 
 
-
-
-
-
-
-
-
 module.exports = domain;
